@@ -37,8 +37,8 @@ export default function NewsletterForm() {
       form.reset();
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: "Submission Error",
+        description: "Could not save your subscription. Please ensure you have enabled Firestore in your Firebase console.",
         variant: "destructive"
       });
     } finally {
