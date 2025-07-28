@@ -100,8 +100,14 @@ export default function ContactForm() {
           )}
         />
         <Button type="submit" variant="accent" className="w-full md:w-auto" disabled={isLoading}>
-            {isLoading ? <Loader2 className="animate-spin" /> : 'Send Message'}
-            {!isLoading && <Send className="ml-2 h-4 w-4" />}
+            {isLoading ? (
+                <Loader2 className="animate-spin" />
+            ) : (
+                <>
+                Send Message
+                <Send className="ml-2 h-4 w-4" />
+                </>
+            )}
         </Button>
       </form>
     </Form>

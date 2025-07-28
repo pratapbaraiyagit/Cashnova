@@ -62,8 +62,14 @@ export default function NewsletterForm() {
           )}
         />
         <Button type="submit" variant="accent" disabled={isLoading}>
-            {isLoading ? <Loader2 className="animate-spin" /> : 'Subscribe'}
-            {!isLoading && <ArrowRight className="ml-2 h-4 w-4" />}
+            {isLoading ? (
+                <Loader2 className="animate-spin" />
+            ) : (
+                <>
+                Subscribe
+                <ArrowRight className="ml-2 h-4 w-4" />
+                </>
+            )}
         </Button>
       </form>
     </Form>
