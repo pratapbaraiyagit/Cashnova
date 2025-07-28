@@ -7,7 +7,9 @@ import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
+import { useState } from "react";
+import { saveSubscription } from "@/services/formService";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -16,6 +18,7 @@ const formSchema = z.object({
 });
 
 export default function NewsletterForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -23,13 +26,24 @@ export default function NewsletterForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Subscribed!",
-      description: "Thanks for subscribing to our newsletter.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    try {
+      await saveSubscription(values.email);
+      toast({
+        title: "Subscribed!",
+        description: "Thanks for subscribing to our newsletter.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -41,15 +55,15 @@ export default function NewsletterForm() {
           render={({ field }) => (
             <FormItem className="flex-1">
               <FormControl>
-                <Input placeholder="Enter your email" {...field} />
+                <Input placeholder="Enter your email" {...field} disabled={isLoading} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" variant="accent">
-            Subscribe
-            <ArrowRight className="ml-2 h-4 w-4" />
+        <Button type="submit" variant="accent" disabled={isLoading}>
+            {isLoading ? <Loader2 className="animate-spin" /> : 'Subscribe'}
+            {!isLoading && <ArrowRight className="ml-2 h-4 w-4" />}
         </Button>
       </form>
     </Form>

@@ -8,7 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
+import { useState } from "react";
+import { saveContactMessage } from "@/services/formService";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -25,6 +27,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,13 +37,24 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. We'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    try {
+      await saveContactMessage(values);
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out. We'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+       toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -85,9 +99,9 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" variant="accent" className="w-full md:w-auto">
-            Send Message
-            <Send className="ml-2 h-4 w-4" />
+        <Button type="submit" variant="accent" className="w-full md:w-auto" disabled={isLoading}>
+            {isLoading ? <Loader2 className="animate-spin" /> : 'Send Message'}
+            {!isLoading && <Send className="ml-2 h-4 w-4" />}
         </Button>
       </form>
     </Form>
