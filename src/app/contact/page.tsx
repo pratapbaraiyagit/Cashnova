@@ -48,7 +48,7 @@ export default function ContactPage() {
                   ))}
                    <div className="flex items-center gap-3 p-3 rounded-lg border-t pt-4">
                         <Mail className="h-6 w-6 text-primary" />
-                        <span className="font-medium text-muted-foreground">contact@cashflowinsights.com</span>
+                        <span className="font-medium text-muted-foreground">contact@cashnova.com</span>
                     </div>
                 </CardContent>
             </Card>

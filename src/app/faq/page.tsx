@@ -9,7 +9,7 @@ export default function FaqPage() {
         <HelpCircle className="mx-auto h-16 w-16 text-primary mb-4" />
         <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Frequently Asked Questions</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          Find answers to common questions about CashFlow Insights and personal finance.
+          Find answers to common questions about Cashnova and personal finance.
         </p>
       </div>
 

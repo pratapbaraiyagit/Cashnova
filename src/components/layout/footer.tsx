@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { PiggyBank, Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
 import NewsletterForm from "@/components/newsletter-form";
 import { Button } from "../ui/button";
+import Logo from "../logo";
 
 const socialLinks = [
   { icon: Twitter, href: "#", name: "Twitter" },
@@ -17,8 +18,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
-              <PiggyBank className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl font-bold">CashFlow Insights</span>
+              <Logo className="h-8 w-8 text-primary" />
+              <span className="font-headline text-2xl font-bold">Cashnova</span>
             </Link>
             <p className="text-muted-foreground max-w-sm">
               Empowering you with the financial knowledge to build a better future.
@@ -57,7 +58,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} CashFlow Insights. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Cashnova. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

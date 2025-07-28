@@ -6,7 +6,7 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'CashFlow Insights - Smart Money Tips for Modern Life',
+  title: 'Cashnova - Smart Money Tips for Modern Life',
   description: 'Cashnova is a sleek, high-performance personal finance blog delivering practical, daily money-saving tips, budgeting advice, and side hustle ideas.',
   keywords: ['personal finance', 'money saving', 'budgeting', 'side hustle', 'investing', 'cashflow'],
 };

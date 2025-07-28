@@ -36,7 +36,7 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">The CashFlow Blog</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">The Cashnova Blog</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
           All our articles in one place. Use the filter to find exactly what you're looking for.
         </p>

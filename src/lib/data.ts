@@ -172,7 +172,7 @@ export const faqs: FaqItem[] = [
     },
     {
         id: "faq-2",
-        question: "How does CashFlow Insights make money?",
+        question: "How does Cashnova make money?",
         answer: "We generate revenue through advertisements (Google AdSense) and affiliate links. When you click on an affiliate link and make a purchase, we may earn a small commission at no extra cost to you. This helps us keep the content free."
     },
     {
@@ -182,7 +182,7 @@ export const faqs: FaqItem[] = [
     },
     {
         id: "faq-4",
-        question: "Can I write for CashFlow Insights?",
+        question: "Can I write for Cashnova?",
         answer: "We are not currently accepting guest posts, but we appreciate your interest! You can follow our social media channels for any future opportunities."
     },
     {
