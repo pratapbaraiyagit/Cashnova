@@ -1,5 +1,5 @@
 import type { Post, Category, FaqItem } from './types';
-import { Lightbulb, PiggyBank, TrendingUp, Handshake } from 'lucide-react';
+import { Lightbulb, PiggyBank, TrendingUp, Handshake, Scale, CircleGauge } from 'lucide-react';
 
 export const categories: Category[] = [
   {
@@ -25,6 +25,18 @@ export const categories: Category[] = [
     name: 'Investing',
     description: 'Beginner-friendly guides and strategies for growing your wealth.',
     icon: TrendingUp,
+  },
+  {
+    slug: 'debt-management',
+    name: 'Debt Management',
+    description: 'Strategies for paying off and managing debt effectively.',
+    icon: Scale,
+  },
+  {
+    slug: 'credit-score',
+    name: 'Credit Score',
+    description: 'Understand and improve your credit score to unlock better financial products.',
+    icon: CircleGauge,
   },
 ];
 
@@ -106,6 +118,84 @@ export const allPosts: Post[] = [
     date: '2024-07-15',
     readingTime: 6,
     content: '<p>Zero-based budgeting is a method where your income minus your expenses equals zero. Every dollar is allocated to a specific category—spending, saving, investing, or debt repayment—leaving no money unaccounted for. It\'s a hands-on approach that forces you to be intentional with your finances.</p>'
+  },
+  {
+    id: 7,
+    slug: 'debt-consolidation-is-it-right-for-you',
+    title: 'Debt Consolidation: Is It Right for You?',
+    excerpt: 'Learn the pros and cons of debt consolidation and whether it\'s a suitable strategy for your financial situation.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'debt papers',
+    category: 'debt-management',
+    author: 'Michael Brown',
+    date: '2024-07-22',
+    readingTime: 7,
+    content: '<h2>Understanding Debt Consolidation</h2><p>Debt consolidation is the process of combining multiple debts into a single, new loan, ideally with a lower interest rate. This can simplify your payments and potentially save you money on interest. Common methods include personal loans and balance transfer credit cards.</p><h3>Pros:</h3><ul><li>Simplified finances with one monthly payment.</li><li>Potential for a lower interest rate.</li><li>A clear end date for your debt payoff.</li></ul><h3>Cons:</h3><ul><li>It doesn\'t solve underlying spending issues.</li><li>Origination fees or balance transfer fees can be costly.</li><li>You might end up with a longer repayment period.</li></ul><p>Before deciding, compare offers and read the fine print. Ensure the new payment is affordable and that the strategy will genuinely help you become debt-free faster.</p>'
+  },
+  {
+    id: 8,
+    slug: 'how-to-improve-your-credit-score-by-100-points',
+    title: 'How to Improve Your Credit Score by 100 Points',
+    excerpt: 'Actionable steps to boost your credit score significantly, opening doors to better loans and lower interest rates.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'credit score report',
+    category: 'credit-score',
+    author: 'Emily White',
+    date: '2024-07-21',
+    readingTime: 8,
+    content: '<h2>Key Factors of Your Credit Score</h2><p>Your credit score is primarily based on five factors: payment history (35%), amounts owed (30%), length of credit history (15%), new credit (10%), and credit mix (10%).</p><h3>Actionable Steps:</h3><ol><li><strong>Pay Bills on Time:</strong> This is the most impactful factor. Set up autopay to avoid missing payments.</li><li><strong>Lower Your Credit Utilization:</strong> Aim to use less than 30% of your available credit. Pay down balances or request a credit limit increase.</li><li><strong>Dispute Errors on Your Report:</strong> Check your credit report for free annually and dispute any inaccuracies.</li><li><strong>Become an Authorized User:</strong> If a family member has good credit, ask to become an authorized user on one of their cards.</li><li><strong>Don\'t Close Old Accounts:</strong> Closing old credit cards can shorten your credit history and increase your utilization ratio.</li></ol><p>Improving your score takes time and consistency, but the benefits are well worth the effort.</p>'
+  },
+  {
+    id: 9,
+    slug: 'the-snowball-vs-avalanche-debt-payoff-method',
+    title: 'The Snowball vs. Avalanche Debt Payoff Method',
+    excerpt: 'Two popular debt repayment strategies, but which one is right for you? We break down the differences.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'decision path',
+    category: 'debt-management',
+    author: 'John Smith',
+    date: '2024-07-14',
+    readingTime: 6,
+    content: '<h3>The Debt Snowball Method</h3><p>With this method, you pay off your debts from the smallest balance to the largest, regardless of interest rates. The psychological win of paying off a debt quickly provides motivation.</p><h3>The Debt Avalanche Method</h3><p>Here, you focus on paying off debts with the highest interest rates first. Mathematically, this method saves you the most money over time.</p><h3>Which is better?</h3><p>The best method is the one you can stick with. If you need quick wins to stay motivated, the snowball method is a great choice. If you are disciplined and want to save the most money, the avalanche method is financially superior.</p>'
+  },
+  {
+    id: 10,
+    slug: 'what-is-a-roth-ira-and-should-you-open-one',
+    title: 'What Is a Roth IRA and Should You Open One?',
+    excerpt: 'A powerful retirement savings tool that offers tax-free growth and withdrawals. Find out if a Roth IRA fits your retirement strategy.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'retirement savings',
+    category: 'investing',
+    author: 'Jane Doe',
+    date: '2024-07-13',
+    readingTime: 7,
+    content: '<p>A Roth IRA is an individual retirement account where you contribute after-tax dollars. Your money grows tax-free, and you can make qualified withdrawals tax-free in retirement. Unlike a traditional IRA, you don\'t get a tax deduction for contributions.</p><h3>Benefits:</h3><ul><li>Tax-free withdrawals in retirement.</li><li>No required minimum distributions (RMDs).</li><li>You can withdraw contributions (not earnings) at any time, penalty-free.</li></ul><h3>Who should consider a Roth IRA?</h3><p>A Roth IRA is often a good choice for those who expect to be in a higher tax bracket in retirement than they are now. It\'s also great for young investors who have a long time horizon for growth.</p>'
+  },
+  {
+    id: 11,
+    slug: 'how-to-manage-student-loans-effectively',
+    title: 'How to Manage Student Loans Effectively',
+    excerpt: 'Strategies for tackling student loan debt, from repayment plans to refinancing options.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'student graduation',
+    category: 'debt-management',
+    author: 'Emily White',
+    date: '2024-07-12',
+    readingTime: 9,
+    content: '<p>Student loan debt can be overwhelming. The key is to have a clear plan.</p><h3>1. Understand Your Loans</h3><p>Know the difference between your federal and private loans, including interest rates and repayment terms.</p><h3>2. Choose the Right Repayment Plan</h3><p>Federal loans offer several options, including income-driven repayment (IDR) plans that can lower your monthly payment.</p><h3>3. Consider Refinancing</h3><p>If you have good credit and a stable income, you might be able to refinance your loans to get a lower interest rate, especially with private loans.</p><h3>4. Pay Extra When Possible</h3><p>Even small extra payments can reduce the total interest you pay and shorten your loan term. Specify that extra payments should go toward the principal of your highest-interest loan.</p>'
+  },
+  {
+    id: 12,
+    slug: 'understanding-your-paycheck-deductions-and-withholding',
+    title: 'Understanding Your Paycheck: Deductions and Withholding',
+    excerpt: 'Ever wonder where all your money goes before it hits your bank account? We break down the common paycheck deductions.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'paycheck analysis',
+    category: 'budgeting',
+    author: 'Michael Brown',
+    date: '2024-07-11',
+    readingTime: 6,
+    content: '<h3>Pre-Tax Deductions:</h3><p>These are taken from your gross pay before taxes are calculated, lowering your taxable income. Common examples include health insurance premiums and 401(k) contributions.</p><h3>Taxes:</h3><p>This includes federal and state income tax, as well as FICA taxes (Social Security and Medicare).</p><h3>Post-Tax Deductions:</h3><p>These are taken out after taxes have been calculated. Examples include Roth 401(k) contributions or wage garnishments.</p><p>Reviewing your paystub helps you understand your total compensation and ensure your withholdings are correct.</p>'
   }
 ];
 
