@@ -8,6 +8,7 @@ import BlogPostCard from "@/components/blog-post-card";
 import AdPlaceholder from "@/components/ad-placeholder";
 import NewsletterForm from "@/components/newsletter-form";
 import { Badge } from "@/components/ui/badge";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export default function Home() {
   return (
@@ -44,11 +45,25 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center">Trending Insights</h2>
         <p className="text-muted-foreground text-center mt-2 mb-10">Handpicked articles making waves in the community.</p>
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-          {featuredPosts.map((post) => (
-            <BlogPostCard key={post.id} post={post} orientation="vertical" />
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
+            {featuredPosts.map((post) => (
+              <CarouselItem key={post.id} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <BlogPostCard post={post} orientation="vertical" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </section>
       
       <section className="container mx-auto px-4">
@@ -73,8 +88,8 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center">Daily Updates</h2>
         <p className="text-muted-foreground text-center mt-2 mb-10">Stay up-to-date with our most recent posts.</p>
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {latestPosts.map((post) => (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {latestPosts.slice(0,4).map((post) => (
             <BlogPostCard key={post.id} post={post} orientation="vertical" />
           ))}
         </div>
