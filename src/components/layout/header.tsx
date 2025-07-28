@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 import Logo from "../logo";
 
 const NAV_LINKS = [
@@ -61,10 +60,6 @@ export default function Header() {
                     <Logo className="h-7 w-7 text-primary" />
                     <span className="font-headline text-xl font-bold">Cashnova</span>
                   </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
                 </div>
                 <nav className="flex flex-col gap-4">
                   {NAV_LINKS.map((link) => (
