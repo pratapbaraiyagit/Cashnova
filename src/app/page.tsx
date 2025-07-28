@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Newspaper, Zap } from "lucide-react";
@@ -21,7 +22,7 @@ export default function Home() {
             <Zap className="mr-2 h-3 w-3" />
             Your Financial Future, Illuminated
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Navigate Your Finances with Cashnova
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
