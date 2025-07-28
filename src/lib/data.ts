@@ -1,5 +1,5 @@
-import type { Post, Category, Resource, FaqItem } from './types';
-import { Lightbulb, PiggyBank, TrendingUp, Handshake, BookOpen, AppWindow, Construction, GraduationCap } from 'lucide-react';
+import type { Post, Category, FaqItem } from './types';
+import { Lightbulb, PiggyBank, TrendingUp, Handshake } from 'lucide-react';
 
 export const categories: Category[] = [
   {
@@ -111,58 +111,6 @@ export const allPosts: Post[] = [
 
 export const featuredPosts: Post[] = allPosts.slice(0, 3);
 export const latestPosts: Post[] = allPosts.slice(0, 6);
-
-export const resources: Resource[] = [
-    {
-        id: 1,
-        title: "Mint",
-        description: "A popular, free budgeting app that helps you track all your finances in one place.",
-        link: "#",
-        type: "App",
-        icon: AppWindow,
-    },
-    {
-        id: 2,
-        title: "Acorns",
-        description: "An investment app that automatically invests your spare change from purchases.",
-        link: "#",
-        type: "App",
-        icon: AppWindow,
-    },
-    {
-        id: 3,
-        title: "The Simple Path to Wealth by JL Collins",
-        description: "An accessible and powerful book on simple, effective long-term investing.",
-        link: "#",
-        type: "Book",
-        icon: BookOpen,
-    },
-    {
-        id: 4,
-        title: "I Will Teach You to Be Rich by Ramit Sethi",
-        description: "A 6-week program for automating your finances and living a rich life.",
-        link: "#",
-        type: "Book",
-        icon: BookOpen,
-    },
-    {
-        id: 5,
-        title: "Fiverr",
-        description: "A great platform to find freelance work or hire talent for your side hustle.",
-        link: "#",
-        type: "Tool",
-        icon: Construction,
-    },
-    {
-        id: 6,
-        title: "Coursera: Financial Markets",
-        description: "A comprehensive course from Yale University on the fundamentals of financial markets.",
-        link: "#",
-        type: "Course",
-        icon: GraduationCap,
-    },
-];
-
 
 export const faqs: FaqItem[] = [
     {

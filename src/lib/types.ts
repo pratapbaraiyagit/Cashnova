@@ -19,15 +19,6 @@ export interface Post {
   content: string;
 }
 
-export interface Resource {
-    id: number;
-    title: string;
-    description: string;
-    link: string;
-    type: 'Tool' | 'App' | 'Book' | 'Course';
-    icon: React.ComponentType<{ className?: string }>;
-}
-
 export interface FaqItem {
     id: string;
     question: string;
