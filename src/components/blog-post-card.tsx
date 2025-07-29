@@ -24,7 +24,8 @@ export default function BlogPostCard({ post, orientation = 'vertical', aspect = 
         <Image
           src={imageUrl}
           alt={title}
-          fill
+          width={400}
+          height={225}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />
@@ -60,7 +61,8 @@ export default function BlogPostCard({ post, orientation = 'vertical', aspect = 
         <Image
           src={imageUrl}
           alt={title}
-          fill
+          width={300}
+          height={300}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />

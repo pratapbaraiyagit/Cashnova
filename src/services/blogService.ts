@@ -1,50 +1,34 @@
-import { db } from '@/lib/firebase';
-import { collection, getDocs, query, where, orderBy, limit, getDoc, doc } from 'firebase/firestore';
 import type { Post } from '@/lib/types';
-
-const postsCollection = collection(db, 'posts');
-
-// Helper to convert a snapshot to a Post array
-const snapshotToPosts = (snapshot: any): Post[] => {
-  return snapshot.docs.map((doc: any) => ({ id: doc.id, ...doc.data() } as Post));
-};
+import { posts } from '@/lib/posts';
 
 export const getAllPosts = async (): Promise<Post[]> => {
-  const q = query(postsCollection, orderBy('date', 'desc'));
-  const snapshot = await getDocs(q);
-  return snapshotToPosts(snapshot);
+  // Sort posts by date in descending order
+  const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return sortedPosts;
 };
 
 export const getPostBySlug = async (slug: string): Promise<Post | null> => {
-  const q = query(postsCollection, where('slug', '==', slug), limit(1));
-  const snapshot = await getDocs(q);
-  if (snapshot.empty) {
-    return null;
-  }
-  const postDoc = snapshot.docs[0];
-  return { id: postDoc.id, ...postDoc.data() } as Post;
+  const post = posts.find(p => p.slug === slug);
+  return post || null;
 };
 
 export const getPostsByCategory = async (categorySlug: string): Promise<Post[]> => {
-    const q = query(postsCollection, where('category', '==', categorySlug), orderBy('date', 'desc'));
-    const snapshot = await getDocs(q);
-    return snapshotToPosts(snapshot);
+  const filteredPosts = posts.filter(p => p.category === categorySlug);
+  const sortedPosts = filteredPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return sortedPosts;
 };
 
 export const getFeaturedPosts = async (): Promise<Post[]> => {
-    const q = query(postsCollection, where('featured', '==', true), limit(3));
-    const snapshot = await getDocs(q);
-    if (!snapshot.empty) {
-        return snapshotToPosts(snapshot);
+    const featured = posts.filter(p => p.featured === true).slice(0, 3);
+    if (featured.length > 0) {
+        return featured;
     }
     // Fallback if no posts are marked as featured
-    const fallbackQuery = query(postsCollection, orderBy('date', 'desc'), limit(3));
-    const fallbackSnapshot = await getDocs(fallbackQuery);
-    return snapshotToPosts(fallbackSnapshot);
+    const latest = await getLatestPosts();
+    return latest.slice(0,3);
 }
 
 export const getLatestPosts = async (): Promise<Post[]> => {
-    const q = query(postsCollection, orderBy('date', 'desc'), limit(6));
-    const snapshot = await getDocs(q);
-    return snapshotToPosts(snapshot);
+    const sortedPosts = [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    return sortedPosts.slice(0, 6);
 }
