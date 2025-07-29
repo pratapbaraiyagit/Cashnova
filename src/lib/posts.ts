@@ -138,28 +138,28 @@ export const posts: Post[] = [
     date: '2024-07-31',
     featured: true,
     readingTime: 6,
-    content: `<h2>Small Changes, Big Savings</h2>
-<p>Saving money doesn't have to mean making huge sacrifices. By making small, conscious decisions every day, you can significantly impact your financial health. Here are 10 simple ways to get started.</p>
-<h3>1. Brew Your Own Coffee</h3>
-<p>That daily latte adds up. Brewing coffee at home can save you hundreds, if not thousands, of dollars a year.</p>
-<h3>2. Pack Your Lunch</h3>
-<p>Just like coffee, buying lunch every day is a major expense. Spend a little time on Sunday prepping lunches for the week.</p>
-<h3>3. Unplug Electronics</h3>
-<p>Phantom energy, or the power devices use when plugged in but not in use, can account for up to 10% of your electricity bill. Unplug chargers and appliances when you're not using them.</p>
-<h3>4. Use a Reusable Water Bottle</h3>
-<p>Avoid buying bottled water. Fill up a reusable bottle at home to stay hydrated for free.</p>
-<h3>5. Plan Your Meals</h3>
-<p>Create a weekly meal plan and a corresponding grocery list. This prevents impulse buys and reduces food waste.</p>
-<h3>6. Wait 24 Hours Before Making a Purchase</h3>
-<p>For non-essential items, implement a 24-hour waiting period. This simple trick helps you avoid impulse spending on things you don't really need.</p>
-<h3>7. Check for Discounts and Coupons</h3>
-<p>Before you buy anything online, do a quick search for coupon codes. Browser extensions like Honey or Rakuten can do the work for you.</p>
-<h3>8. Use Public Transportation or Carpool</h3>
-<p>Cut down on gas and vehicle maintenance costs by using public transit, biking, walking, or carpooling whenever possible.</p>
-<h3>9. Cancel Unused Subscriptions</h3>
-<p>Review your bank statements for recurring charges. You might be paying for recurring subscriptions or services you no longer use.</p>
-<h3>10. Automate Your Savings</h3>
-<p>Set up an automatic transfer from your checking to your savings account each payday. Paying yourself first is the most effective way to save consistently.</p>`
+    content: `<h2 class="text-2xl font-bold mt-8 mb-4">Small Changes, Big Savings</h2>
+<p class="mb-6">Saving money doesn't have to mean making huge sacrifices. By making small, conscious decisions every day, you can significantly impact your financial health. Here are 10 simple ways to get started.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">1. Brew Your Own Coffee</h3>
+<p class="mb-4">That daily latte adds up. Brewing coffee at home can save you hundreds, if not thousands, of dollars a year.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">2. Pack Your Lunch</h3>
+<p class="mb-4">Just like coffee, buying lunch every day is a major expense. Spend a little time on Sunday prepping lunches for the week.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">3. Unplug Electronics</h3>
+<p class="mb-4">Phantom energy, or the power devices use when plugged in but not in use, can account for up to 10% of your electricity bill. Unplug chargers and appliances when you're not using them.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">4. Use a Reusable Water Bottle</h3>
+<p class="mb-4">Avoid buying bottled water. Fill up a reusable bottle at home to stay hydrated for free.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">5. Plan Your Meals</h3>
+<p class="mb-4">Create a weekly meal plan and a corresponding grocery list. This prevents impulse buys and reduces food waste.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">6. Wait 24 Hours Before Making a Purchase</h3>
+<p class="mb-4">For non-essential items, implement a 24-hour waiting period. This simple trick helps you avoid impulse spending on things you don't really need.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">7. Check for Discounts and Coupons</h3>
+<p class="mb-4">Before you buy anything online, do a quick search for coupon codes. Browser extensions like Honey or Rakuten can do the work for you.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">8. Use Public Transportation or Carpool</h3>
+<p class="mb-4">Cut down on gas and vehicle maintenance costs by using public transit, biking, walking, or carpooling whenever possible.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">9. Cancel Unused Subscriptions</h3>
+<p class="mb-4">Review your bank statements for recurring charges. You might be paying for recurring subscriptions or services you no longer use.</p>
+<h3 class="text-xl font-semibold mt-6 mb-2">10. Automate Your Savings</h3>
+<p class="mb-4">Set up an automatic transfer from your checking to your savings account each payday. Paying yourself first is the most effective way to save consistently.</p>`
   },
   {
     id: '2',
@@ -171,7 +171,7 @@ export const posts: Post[] = [
     category: 'side-hustles',
     author: 'John Smith',
     date: '2024-07-25',
-    featured: true,
+    featured: false,
     readingTime: 7,
     content: `<p>Side hustles are a great way to increase your income, pay off debt faster, or save for a big goal. The best part is that many of them can be done from the comfort of your own home and on your own schedule.</p>
     <h3>1. Freelance Writing</h3><p>If you have a way with words, freelance writing is a flexible and profitable option. Websites like Upwork and Fiverr are great places to find your first clients.</p>
@@ -188,7 +188,7 @@ export const posts: Post[] = [
     category: 'investing',
     author: 'Emily White',
     date: '2024-07-22',
-    featured: true,
+    featured: false,
     readingTime: 8,
     content: `<p>Investing is the most powerful tool for building wealth over time, thanks to the magic of compound interest. While it might seem complex, the basic principles are straightforward.</p><h3>What is Investing?</h3><p>At its core, investing is about using your money to buy assets that have the potential to generate income or appreciate in value. These assets can include stocks, bonds, real estate, and more.</p><h3>Why Should You Invest?</h3><p>Investing helps your money grow and outpace inflation. Instead of letting your cash sit in a low-interest savings account, it puts it to work for you.</p><h3>How to Get Started</h3><p>A great way for beginners to start is with low-cost index funds or ETFs. These funds hold a diversified portfolio of stocks, which spreads out your risk. Platforms like Vanguard, Fidelity, and Charles Schwab make it easy to open an account and start investing with a small amount of money.</p>`
   },
@@ -204,11 +204,53 @@ export const posts: Post[] = [
     date: '2024-07-20',
     featured: false,
     readingTime: 6,
-    content: `A higher credit score can save you thousands of dollars in interest over your lifetime. It gives you access to better rates on mortgages, car loans, and credit cards. Here's how to boost your score.</p>
-    <h3>1. Pay Your Bills on Time</h3><p>Payment history is the single most important factor in your credit score. Even one late payment can have a significant negative impact. Set up automatic payments to ensure you never miss a due date.</p>
-    <h3>2. Reduce Your Credit Utilization</h3><p>Your credit utilization ratio is the amount of credit you're using compared to your total credit limit. Aim to keep it below 30%. You can do this by paying down your balances or requesting a credit limit increase.</p>
-    <h3>3. Check Your Credit Report for Errors</h3><p>Mistakes on your credit report are more common than you think. You're entitled to a free credit report from each of the three major bureaus (Equifax, Experian, and TransUnion) every year. Review it carefully and dispute any errors you find.</p>`
+    content: `<p>A higher credit score can save you thousands of dollars in interest over your lifetime. It gives you access to better rates on mortgages, car loans, and credit cards. Here's how to boost your score.</p>
+    <h3 class="text-xl font-semibold mt-6 mb-2">1. Pay Your Bills on Time</h3><p>Payment history is the single most important factor in your credit score. Even one late payment can have a significant negative impact. Set up automatic payments to ensure you never miss a due date.</p>
+    <h3 class="text-xl font-semibold mt-6 mb-2">2. Reduce Your Credit Utilization</h3><p>Your credit utilization ratio is the amount of credit you're using compared to your total credit limit. Aim to keep it below 30%. You can do this by paying down your balances or requesting a credit limit increase.</p>
+    <h3 class="text-xl font-semibold mt-6 mb-2">3. Check Your Credit Report for Errors</h3><p>Mistakes on your credit report are more common than you think. You're entitled to a free credit report from each of the three major bureaus (Equifax, Experian, and TransUnion) every year. Review it carefully and dispute any errors you find.</p>`
+  },
+  {
+    id: '7',
+    slug: 'smart-finance-tips-for-side-hustlers',
+    title: 'Smart Finance Tips for Side Hustlers: How to Make Your Extra Income Work for You',
+    excerpt: 'Side hustles are booming in 2025. Whether you\'re freelancing, selling online, or offering weekend services, your extra income can fast-track your financial freedom—if managed right.',
+    imageUrl: 'https://placehold.co/800x450.png',
+    imageHint: 'finance management',
+    category: 'side-hustles',
+    author: 'Cashnova Team',
+    date: '2024-08-02',
+    featured: false,
+    readingTime: 4,
+    content: `
+      <p>Side hustles are booming in 2025. Whether you're freelancing, selling online, or offering weekend services, your extra income can fast-track your financial freedom—if managed right. Here’s how to make your money work harder:</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">🏦 1. Separate Your Finances</h3>
+      <p>Open a dedicated bank account for your side hustle income. It simplifies budgeting, tracks true profits, and keeps things clean for tax purposes.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">📊 2. Track Every Rupee</h3>
+      <p>Use tools like KhataBook, Google Sheets, or Notion to log payments received, business expenses, and net profit/loss. Clarity equals control.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">🎯 3. Set Clear Goals</h3>
+      <p>Why are you hustling? Define your "why," whether it's to pay off debt, fund a trip, or build an emergency fund. Purpose keeps you focused and motivated.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">🔁 4. Automate Saving & Investing</h3>
+      <p>Let your money grow silently in the background through SIPs in mutual funds, recurring deposits, or digital gold. Even small, consistent amounts add up fast.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">🧾 5. Don’t Ignore Taxes</h3>
+      <p>If you've earned over ₹50,000 from side work, be sure to file it under “income from other sources,” maintain invoices and receipts, and consult a CA if you're unsure. Stay compliant to avoid penalties.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">📈 6. Reinvest in Growth</h3>
+      <p>Upgrade your gear, build a portfolio site, or run targeted ads—but only from your profits, not your main salary.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">⚠️ 7. Avoid Lifestyle Inflation</h3>
+      <p>More income shouldn’t automatically mean more spending. Avoid splurging just because you're earning more. Let your hustle income build wealth, not just buy things.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">✅ Final Thought</h3>
+      <p>Your side hustle is more than just "extra cash"—it’s your freedom fund. Stay intentional, organized, and consistent—and you’ll turn your hustle into long-term financial power. 💪💼</p>
+    `
   }
 ];
+
+    
 
     
