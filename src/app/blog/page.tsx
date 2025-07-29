@@ -1,17 +1,34 @@
 "use client";
 
-import { useState } from 'react';
-import { allPosts, categories } from '@/lib/data';
+import { useState, useEffect } from 'react';
+import type { Post } from '@/lib/types';
+import { getAllPosts } from '@/services/blogService';
+import { getAllCategories } from '@/lib/data';
 import BlogPostCard from '@/components/blog-post-card';
 import AdPlaceholder from '@/components/ad-placeholder';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Skeleton } from '@/components/ui/skeleton';
 
 const POSTS_PER_PAGE = 6;
 
 export default function BlogPage() {
+  const [allPosts, setAllPosts] = useState<Post[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  const categories = getAllCategories();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setIsLoading(true);
+      const posts = await getAllPosts();
+      setAllPosts(posts);
+      setIsLoading(false);
+    };
+    fetchPosts();
+  }, []);
 
   const filteredPosts = selectedCategory === 'all'
     ? allPosts
@@ -67,14 +84,31 @@ export default function BlogPage() {
         </div>
       </div>
       
-      <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-        {paginatedPosts.map((post, index) => (
-          <>
-            <BlogPostCard key={post.id} post={post} orientation="horizontal" />
-            {index === 3 && <div className="lg:col-span-2"><AdPlaceholder /></div>}
-          </>
-        ))}
-      </div>
+       {isLoading ? (
+        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
+            {Array.from({ length: POSTS_PER_PAGE }).map((_, index) => (
+                <div key={index} className="flex flex-col md:flex-row gap-4">
+                    <Skeleton className="w-full md:w-2/5 aspect-video md:aspect-square" />
+                    <div className="w-full md:w-3/5 space-y-3">
+                        <Skeleton className="h-5 w-1/4" />
+                        <Skeleton className="h-6 w-3/4" />
+                        <Skeleton className="h-16 w-full" />
+                        <Skeleton className="h-5 w-1/2" />
+                    </div>
+                </div>
+            ))}
+        </div>
+        ) : (
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
+            {paginatedPosts.map((post, index) => (
+              <>
+                <BlogPostCard key={post.id} post={post} orientation="horizontal" />
+                {index === 3 && <div className="lg:col-span-2"><AdPlaceholder /></div>}
+              </>
+            ))}
+          </div>
+        )}
+
 
        {totalPages > 1 && (
         <div className="flex justify-center items-center gap-2 mt-12">

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import { allPosts, categories } from '@/lib/data';
+import { getPostsByCategory } from '@/services/blogService';
+import { getAllCategories, getCategoryDetails } from '@/lib/data';
 import BlogPostCard from '@/components/blog-post-card';
 import AdPlaceholder from '@/components/ad-placeholder';
 import Link from 'next/link';
@@ -13,20 +14,21 @@ type CategoryPageProps = {
 };
 
 export async function generateStaticParams() {
+  const categories = getAllCategories();
   return categories.map((category) => ({
     category: category.slug,
   }));
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category: categorySlug } = params;
-  const category = categories.find((c) => c.slug === categorySlug);
+  const category = getCategoryDetails(categorySlug);
 
   if (!category) {
     notFound();
   }
 
-  const posts = allPosts.filter((post) => post.category === categorySlug);
+  const posts = await getPostsByCategory(categorySlug);
 
   return (
     <div className="container mx-auto px-4 py-12">

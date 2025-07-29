@@ -1,17 +1,21 @@
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Newspaper, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { featuredPosts, latestPosts, categories } from "@/lib/data";
+import { getAllCategories } from "@/lib/data";
+import { getFeaturedPosts, getLatestPosts } from "@/services/blogService";
 import BlogPostCard from "@/components/blog-post-card";
 import AdPlaceholder from "@/components/ad-placeholder";
 import NewsletterForm from "@/components/newsletter-form";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-export default function Home() {
+export default async function Home() {
+  const featuredPosts = await getFeaturedPosts();
+  const latestPosts = await getLatestPosts();
+  const categories = getAllCategories();
+
   return (
     <div className="flex flex-col gap-16 md:gap-24 lg:gap-32">
       <section className="relative pt-20 pb-12 md:pt-32 md:pb-20 text-center overflow-hidden">

@@ -6,17 +6,17 @@ export interface Category {
 }
 
 export interface Post {
-  id: number;
+  id: string; // Firestore document ID
   slug: string;
   title: string;
   excerpt: string;
   imageUrl: string;
   imageHint: string;
-  category: string;
+  category: string; // Category slug
   author: string;
-  date: string;
+  date: string; // Should be in a format like 'YYYY-MM-DD'
   readingTime: number;
-  content: string;
+  content: string; // HTML content
 }
 
 export interface FaqItem {
