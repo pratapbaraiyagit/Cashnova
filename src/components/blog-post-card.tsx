@@ -30,52 +30,54 @@ export default function BlogPostCard({ post, orientation = 'vertical', aspect = 
           data-ai-hint={imageHint}
         />
       </div>
-      <CardHeader>
-        <Badge variant="secondary" className="w-fit mb-2 uppercase text-xs tracking-wider">{category.replace('-', ' ')}</Badge>
-        <CardTitle className="text-lg leading-snug group-hover:text-primary transition-colors">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow text-sm">
-        <p className="text-muted-foreground line-clamp-3">{excerpt}</p>
-      </CardContent>
-      <CardFooter className="flex justify-between items-center text-xs text-muted-foreground mt-auto pt-0">
-        <div className="flex flex-col sm:flex-row sm:gap-4 gap-1 text-xs">
-            <div className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" />
-                <span>{date}</span>
+      <div className="flex flex-col flex-grow p-6 pt-0">
+          <CardHeader className="p-0 pt-6">
+            <Badge variant="secondary" className="w-fit mb-2 uppercase text-xs tracking-wider">{category.replace('-', ' ')}</Badge>
+            <CardTitle className="text-lg leading-snug group-hover:text-primary transition-colors line-clamp-2">{title}</CardTitle>
+          </CardHeader>
+          <CardContent className="flex-grow p-0 pt-4 text-sm">
+            <p className="text-muted-foreground line-clamp-3">{excerpt}</p>
+          </CardContent>
+          <CardFooter className="flex justify-between items-center text-xs text-muted-foreground mt-auto pt-4 p-0">
+            <div className="flex flex-col sm:flex-row sm:gap-4 gap-1 text-xs">
+                <div className="flex items-center gap-1.5">
+                    <Calendar className="h-3.5 w-3.5" />
+                    <span>{date}</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" />
+                    <span>{readingTime} min read</span>
+                </div>
             </div>
-            <div className="flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" />
-                <span>{readingTime} min read</span>
+            <div className="flex items-center gap-1 text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="hidden md:inline">Read</span> <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
             </div>
+          </CardFooter>
         </div>
-        <div className="flex items-center gap-1 text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-          <span className="hidden md:inline">Read</span> <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-        </div>
-      </CardFooter>
     </>
   );
   
   const horizontalLayout = (
     <Card className={cn(cardClasses, "md:flex-row")}>
-      <div className="md:w-2/5 relative aspect-video md:aspect-square overflow-hidden">
+      <div className="md:w-2/5 relative aspect-video md:aspect-auto overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
           width={300}
           height={300}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />
       </div>
-      <div className="md:w-3/5 flex flex-col p-4">
+      <div className="md:w-3/5 flex flex-col p-6">
         <CardHeader className="p-0">
            <Badge variant="secondary" className="w-fit mb-2 uppercase text-xs tracking-wider">{category.replace('-', ' ')}</Badge>
-           <CardTitle className="text-xl leading-snug group-hover:text-primary transition-colors">{title}</CardTitle>
+           <CardTitle className="text-xl leading-snug group-hover:text-primary transition-colors line-clamp-2">{title}</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow p-0 py-4">
           <p className="text-muted-foreground text-sm line-clamp-3">{excerpt}</p>
         </CardContent>
-        <CardFooter className="mt-auto flex justify-between items-center text-xs text-muted-foreground p-0">
+        <CardFooter className="mt-auto flex justify-between items-center text-xs text-muted-foreground p-0 pt-4">
         <div className="flex gap-4">
             <div className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" />
