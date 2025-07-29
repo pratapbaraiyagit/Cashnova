@@ -16,6 +16,41 @@ export const posts: Post[] = [
     content: `<h2>Why a Budget is Your Financial Superpower</h2><p>Many people hear the word 'budget' and think of restrictions and spreadsheets. But a budget is actually a plan that gives you freedom! It's about telling your money where to go, instead of wondering where it went. By creating a clear plan for your income and expenses, you can ensure you have enough for your needs, wants, and most importantly, your long-term goals.</p><h3>Step 1: Track Your Spending</h3><p>For one month, track every single dollar you spend. Use an app or a simple notebook. This isn't about judging yourself; it's about gathering data. You might be surprised where your money is actually going!</p><h3>Step 2: Use the 50/30/20 Rule</h3><p>A great starting point for budgeting is the 50/30/20 rule. Allocate 50% of your after-tax income to Needs (housing, utilities, groceries), 30% to Wants (dining out, hobbies, shopping), and 20% to Savings and Debt Repayment. It's a simple framework that you can adjust to your lifestyle.</p>`
   },
   {
+    id: '5',
+    slug: '10-simple-ways-to-save-money-daily',
+    title: '10 Simple Ways to Save Money Daily',
+    excerpt: 'Discover 10 easy and practical ways to cut your expenses and boost your savings every single day.',
+    imageUrl: 'https://placehold.co/800x600.png',
+    imageHint: 'saving money',
+    category: 'saving-tips',
+    author: 'John Smith',
+    date: '2024-07-31',
+    featured: true,
+    readingTime: 6,
+    content: `<h2>Small Changes, Big Savings</h2>
+<p>Saving money doesn't have to mean making huge sacrifices. By making small, conscious decisions every day, you can significantly impact your financial health. Here are 10 simple ways to get started.</p>
+<h3>1. Brew Your Own Coffee</h3>
+<p>That daily latte adds up. Brewing coffee at home can save you hundreds, if not thousands, of dollars a year.</p>
+<h3>2. Pack Your Lunch</h3>
+<p>Just like coffee, buying lunch every day is a major expense. Spend a little time on Sunday prepping lunches for the week.</p>
+<h3>3. Unplug Electronics</h3>
+<p>Phantom energy, or the power devices use when plugged in but not in use, can account for up to 10% of your electricity bill. Unplug chargers and appliances when you're not using them.</p>
+<h3>4. Use a Reusable Water Bottle</h3>
+<p>Avoid buying bottled water. Fill up a reusable bottle at home to stay hydrated for free.</p>
+<h3>5. Plan Your Meals</h3>
+<p>Create a weekly meal plan and a corresponding grocery list. This prevents impulse buys and reduces food waste.</p>
+<h3>6. Wait 24 Hours Before Making a Purchase</h3>
+<p>For non-essential items, implement a 24-hour waiting period. This simple trick helps you avoid impulse spending on things you don't really need.</p>
+<h3>7. Check for Discounts and Coupons</h3>
+<p>Before you buy anything online, do a quick search for coupon codes. Browser extensions like Honey or Rakuten can do the work for you.</p>
+<h3>8. Use Public Transportation or Carpool</h3>
+<p>Cut down on gas and vehicle maintenance costs by using public transit, biking, walking, or carpooling whenever possible.</p>
+<h3>9. Cancel Unused Subscriptions</h3>
+<p>Review your bank statements for recurring charges. You might be paying for streaming services or apps you no longer use.</p>
+<h3>10. Automate Your Savings</h3>
+<p>Set up an automatic transfer from your checking to your savings account each payday. Paying yourself first is the most effective way to save consistently.</p>`
+  },
+  {
     id: '2',
     slug: 'side-hustles-to-boost-your-income',
     title: '10 Side Hustles You Can Start Today to Boost Your Income',
