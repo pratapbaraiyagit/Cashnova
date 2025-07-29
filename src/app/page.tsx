@@ -1,8 +1,10 @@
+"use client";
 
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { ArrowRight, Newspaper, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { getAllCategories } from "@/lib/data";
 import { getFeaturedPosts, getLatestPosts } from "@/services/blogService";
 import BlogPostCard from "@/components/blog-post-card";
@@ -10,11 +12,31 @@ import AdPlaceholder from "@/components/ad-placeholder";
 import NewsletterForm from "@/components/newsletter-form";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Skeleton } from '@/components/ui/skeleton';
+import { Post } from '@/lib/types';
+import { Category } from '@/lib/types';
 
-export default async function Home() {
-  const featuredPosts = await getFeaturedPosts();
-  const latestPosts = await getLatestPosts();
+
+export default function Home() {
+  const [featuredPosts, setFeaturedPosts] = useState<Post[]>([]);
+  const [latestPosts, setLatestPosts] = useState<Post[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const categories = getAllCategories();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setIsLoading(true);
+      const [featured, latest] = await Promise.all([
+        getFeaturedPosts(),
+        getLatestPosts()
+      ]);
+      setFeaturedPosts(featured);
+      setLatestPosts(latest);
+      setIsLoading(false);
+    };
+    fetchPosts();
+  }, []);
+
 
   return (
     <div className="flex flex-col gap-16 md:gap-24 lg:gap-32">
@@ -50,25 +72,33 @@ export default async function Home() {
       <section className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center">Trending Insights</h2>
         <p className="text-muted-foreground text-center mt-2 mb-10">Handpicked articles making waves in the community.</p>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-5xl mx-auto"
-        >
-          <CarouselContent>
-            {featuredPosts.map((post) => (
-              <CarouselItem key={post.id} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <BlogPostCard post={post} orientation="vertical" />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        {isLoading ? (
+          <div className="w-full max-w-5xl mx-auto flex justify-center gap-4">
+            <Skeleton className="w-1/3 h-96" />
+            <Skeleton className="w-1/3 h-96 hidden md:block" />
+            <Skeleton className="w-1/3 h-96 hidden lg:block" />
+          </div>
+        ) : (
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              {featuredPosts.map((post) => (
+                <CarouselItem key={post.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <BlogPostCard post={post} orientation="vertical" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        )}
       </section>
       
       <section className="container mx-auto px-4">
@@ -93,11 +123,17 @@ export default async function Home() {
       <section className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center">Daily Updates</h2>
         <p className="text-muted-foreground text-center mt-2 mb-10">Stay up-to-date with our most recent posts.</p>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {latestPosts.slice(0,4).map((post) => (
-            <BlogPostCard key={post.id} post={post} orientation="vertical" />
-          ))}
-        </div>
+        {isLoading ? (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {Array.from({length: 4}).map((_, i) => <Skeleton key={i} className="h-96" />)}
+            </div>
+        ) : (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {latestPosts.slice(0,4).map((post) => (
+                <BlogPostCard key={post.id} post={post} orientation="vertical" />
+              ))}
+            </div>
+        )}
         <div className="text-center mt-12">
           <Button asChild variant="outline">
             <Link href="/blog">
