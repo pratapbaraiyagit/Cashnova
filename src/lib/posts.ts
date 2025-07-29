@@ -2,11 +2,79 @@ import type { Post } from './types';
 
 export const posts: Post[] = [
   {
+    id: '6',
+    slug: 'capital-markets-ipo-watch-july-2025',
+    title: 'Capital Markets & IPO Watch',
+    excerpt: 'India’s capital markets are on fire this year—and July 2025 has emerged as the hottest month so far. With strong investor sentiment, improved market stability, and a growing pipeline of high-quality companies, the IPO scene is attracting everyone from seasoned traders to first-time retail investors.',
+    imageUrl: 'https://placehold.co/800x450.png',
+    imageHint: 'stock market chart',
+    category: 'capital-markets',
+    author: 'Cashnova Team',
+    date: '2024-08-01',
+    featured: true,
+    readingTime: 7,
+    content: `
+      <p>India’s capital markets are on fire this year—and July 2025 has emerged as the hottest month so far. With strong investor sentiment, improved market stability, and a growing pipeline of high-quality companies, the IPO (Initial Public Offering) scene is attracting everyone from seasoned traders to first-time retail investors.</p>
+      <p>Here’s a breakdown of what’s happening, what’s hot, and what’s next in the world of Indian IPOs and capital markets.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">1. 📈 July 2025: Busiest IPO Month of the Year</h3>
+      <p>Over ₹10,000 crore has been raised this month alone through public issues. Multiple companies across sectors have launched IPOs, capitalizing on favorable market conditions before new SEBI norms kick in.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">2. 💹 Average Listing Gains: 20%+</h3>
+      <p>Companies that listed this month saw average gains of 20–25% on listing day, signaling strong demand and market confidence. Many issues were oversubscribed multiple times, especially in the retail and NII (non-institutional investor) categories.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">3. 🟢 Notable IPOs This Month</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>✅ Aditya Infotech Ltd</strong><br>Sector: IT Infrastructure<br>Issue Size: ₹1,300 crore<br>Price Band: ₹640–675<br>GMP: ₹45–₹50<br>A well-established tech player with strong financials and government contracts.</li>
+        <li><strong>✅ Laxmi India Finance</strong><br>NBFC focused on rural lending and vehicle finance. Positive market response due to growth potential in Tier-2/3 markets.</li>
+        <li><strong>✅ Kaytex Fabrics</strong><br>Niche textile exporter. Limited scale, but healthy margins and export momentum.</li>
+      </ul>
+      
+      <h3 class="mt-6 text-xl font-semibold">4. 🔜 IPOs to Watch in August & September</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>📌 NSDL (National Securities Depository Ltd)</strong><br>Issue Size: ₹3,400 crore<br>Key infra player in India’s securities market, expected to see strong institutional interest.</li>
+          <li><strong>📌 Tata Capital</strong><br>SEBI-approved, estimated size ₹17,000+ crore<br>One of the most awaited NBFC listings, as mandated under RBI rules.</li>
+          <li><strong>📌 Lenskart</strong><br>Filed DRHP to raise ₹2,150 crore. A big name in consumer tech, offering strong brand recall and growth.</li>
+          <li><strong>📌 Also in the Pipeline:</strong><br>BlueStone Jewellery, JSW Cement, Credila Financial Services, Travel Food Services, PhysicsWallah, Seedworks International, Veeda Clinical Research</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">5. 📊 FY25 IPO Snapshot (So Far)</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>Mainboard IPOs: 80+</li>
+        <li>Total Funds Raised: ₹1.63 lakh crore (~$20 billion)</li>
+        <li>Avg. IPO Returns: Outperforming Nifty/Sensex by 3–4x</li>
+        <li>Positive Listings: 90%+ of IPOs closed above issue price</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">6. 📉 Startups Prefer Public Over Private</h3>
+      <p>In FY25, Indian startups raised over ₹44,000 crore from public markets—double what they raised through private venture funding. This marks a clear shift in how companies now seek capital.</p>
+
+      <h3 class="mt-6 text-xl font-semibold">7. 🔎 Key Trends in Capital Markets</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>📍 Retail Participation is Rising</strong><br>Apps, influencers, and easy access to demat accounts have pushed more individuals into IPO investing.</li>
+        <li><strong>📍 Fundamentals Over Hype</strong><br>Investors are becoming selective—valuing profitability and governance over just buzz and GMPs.</li>
+        <li><strong>📍 Sector Diversification</strong><br>No longer just tech—IPOs now span NBFCs, infra, healthcare, education, logistics, and even jewelry.</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">8. 💡 Tips for IPO Investors</h3>
+       <ul class="list-disc pl-6 mt-4 space-y-2">
+          <li>Read the RHP: Always understand the company’s financials and risk factors</li>
+          <li>Avoid chasing GMP: It’s unofficial and speculative</li>
+          <li>Compare valuations: See how the company stacks up against listed peers</li>
+          <li>Diversify: Avoid putting all your money in a single IPO—spread your risk</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">✅ Final Thought: A Market in Motion</h3>
+      <p>The Indian IPO market in 2025 is maturing. There’s more discipline, more opportunity, and a wider variety of companies coming to market. For investors, this is a chance to participate in India’s economic story—one share at a time.</p>
+      <p>Stay informed, stay selective, and you could ride the next wave of wealth creation from the ground up.</p>
+    `
+  },
+  {
     id: '1',
     slug: 'the-50-30-20-budgeting-rule',
     title: 'The 50/30/20 Rule: A Simple Budget to Transform Your Finances',
     excerpt: 'Discover the power of the 50/30/20 rule, a straightforward budgeting framework that helps you manage your needs, wants, and financial goals without complicated spreadsheets.',
-    imageUrl: '/images/simple_budget_rules.png',
+    imageUrl: 'https://placehold.co/800x450.png',
     imageHint: 'budget piggybank',
     category: 'budgeting',
     author: 'Maria Garcia',
@@ -63,7 +131,7 @@ export const posts: Post[] = [
     slug: '10-simple-ways-to-save-money-daily',
     title: '10 Simple Ways to Save Money Daily',
     excerpt: 'Discover 10 easy and practical ways to cut your expenses and boost your savings every single day.',
-    imageUrl: '/images/save_money_banner.png',
+    imageUrl: 'https://placehold.co/800x450.png',
     imageHint: 'save money banner',
     category: 'saving-tips',
     author: 'John Smith',
@@ -89,7 +157,7 @@ export const posts: Post[] = [
 <h3>8. Use Public Transportation or Carpool</h3>
 <p>Cut down on gas and vehicle maintenance costs by using public transit, biking, walking, or carpooling whenever possible.</p>
 <h3>9. Cancel Unused Subscriptions</h3>
-<p>Review your bank statements for recurring charges. You might be paying for streaming services or apps you no longer use.</p>
+<p>Review your bank statements for recurring charges. You might be paying for recurring subscriptions or services you no longer use.</p>
 <h3>10. Automate Your Savings</h3>
 <p>Set up an automatic transfer from your checking to your savings account each payday. Paying yourself first is the most effective way to save consistently.</p>`
   },

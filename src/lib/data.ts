@@ -24,6 +24,11 @@ export const categoryDetails: { [key: string]: { name: string; description: stri
     description: 'Beginner-friendly guides and strategies for growing your wealth.',
     icon: TrendingUp,
   },
+  'capital-markets': {
+    name: 'Capital Markets',
+    description: 'Insights and analysis on stock markets, IPOs, and financial trends.',
+    icon: TrendingUp,
+  },
   'debt-management': {
     name: 'Debt Management',
     description: 'Strategies for paying off and managing debt effectively.',
