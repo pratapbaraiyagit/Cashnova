@@ -23,7 +23,7 @@ export default function BlogPostCard({ post, orientation = 'vertical' }: BlogPos
           src={imageUrl}
           alt={title}
           fill
-          className="object-contain transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />
       </div>
@@ -61,7 +61,7 @@ export default function BlogPostCard({ post, orientation = 'vertical' }: BlogPos
           src={imageUrl}
           alt={title}
           fill
-          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />
       </div>
