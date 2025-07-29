@@ -210,3 +210,5 @@ export const posts: Post[] = [
     <h3>3. Check Your Credit Report for Errors</h3><p>Mistakes on your credit report are more common than you think. You're entitled to a free credit report from each of the three major bureaus (Equifax, Experian, and TransUnion) every year. Review it carefully and dispute any errors you find.</p>`
   }
 ];
+
+    
