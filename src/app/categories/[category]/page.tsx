@@ -6,6 +6,7 @@ import AdPlaceholder from '@/components/ad-placeholder';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import React from 'react';
 
 type CategoryPageProps = {
   params: {
@@ -35,10 +36,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
       <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
         {posts.map((post, index) => (
-          <>
-            <BlogPostCard key={post.id} post={post} orientation="horizontal" />
+          <React.Fragment key={post.id}>
+            <BlogPostCard post={post} orientation="horizontal" />
             {index === 3 && <div className="lg:col-span-2"><AdPlaceholder /></div>}
-          </>
+          </React.Fragment>
         ))}
       </div>
 

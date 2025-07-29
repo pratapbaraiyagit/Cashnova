@@ -5,6 +5,7 @@ import BlogPostCard from '@/components/blog-post-card';
 import AdPlaceholder from '@/components/ad-placeholder';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import React from 'react';
 
 export default async function BlogPage({ searchParams }: { searchParams?: { [key: string]: string | undefined } }) {
   const allPosts = await getAllPosts();
@@ -37,10 +38,10 @@ export default async function BlogPage({ searchParams }: { searchParams?: { [key
       
       <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
         {filteredPosts.map((post, index) => (
-          <>
-            <BlogPostCard key={post.id} post={post} orientation="horizontal" />
+          <React.Fragment key={post.id}>
+            <BlogPostCard post={post} orientation="horizontal" />
             {index === 3 && <div className="lg:col-span-2"><AdPlaceholder /></div>}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
