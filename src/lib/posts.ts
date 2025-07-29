@@ -5,15 +5,58 @@ export const posts: Post[] = [
     id: '1',
     slug: 'the-50-30-20-budgeting-rule',
     title: 'The 50/30/20 Rule: A Simple Budget to Transform Your Finances',
-    excerpt: 'Learn how to take control of your finances with the 50/30/20 budgeting rule. It\'s the first step towards financial freedom.',
-    imageUrl: '/images/sample-post.png',
-    imageHint: 'woman planning',
+    excerpt: 'Discover the power of the 50/30/20 rule, a straightforward budgeting framework that helps you manage your needs, wants, and financial goals without complicated spreadsheets.',
+    imageUrl: 'https://placehold.co/800x450.png',
+    imageHint: 'budget piggybank',
     category: 'budgeting',
     author: 'Maria Garcia',
     date: '2024-07-28',
     featured: true,
-    readingTime: 4,
-    content: `<h2>Why a Budget is Your Financial Superpower</h2><p>Many people hear the word 'budget' and think of restrictions and spreadsheets. But a budget is actually a plan that gives you freedom! It's about telling your money where to go, instead of wondering where it went. By creating a clear plan for your income and expenses, you can ensure you have enough for your needs, wants, and most importantly, your long-term goals.</p><h3>Step 1: Track Your Spending</h3><p>For one month, track every single dollar you spend. Use an app or a simple notebook. This isn't about judging yourself; it's about gathering data. You might be surprised where your money is actually going!</p><h3>Step 2: Use the 50/30/20 Rule</h3><p>A great starting point for budgeting is the 50/30/20 rule. Allocate 50% of your after-tax income to Needs (housing, utilities, groceries), 30% to Wants (dining out, hobbies, shopping), and 20% to Savings and Debt Repayment. It's a simple framework that you can adjust to your lifestyle.</p>`
+    readingTime: 5,
+    content: `
+      <p>Feeling overwhelmed by your finances? The 50/30/20 budgeting rule is a simple, intuitive framework designed to help you regain control without drowning in spreadsheets. It provides a clear path to managing your money, covering your necessities, enjoying your life, and building a secure future. Let's break down how it works.</p>
+      
+      <h2 class="mt-8 text-2xl font-bold">What is the 50/30/20 Rule?</h2>
+      <p>The rule is simple: you allocate your after-tax income into three spending categories:</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>50% for Needs:</strong> The essentials you can't live without.</li>
+        <li><strong>30% for Wants:</strong> Your lifestyle choices that make life more enjoyable.</li>
+        <li><strong>20% for Savings & Debt Repayment:</strong> Your financial goals and safety net.</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">50% for Needs</h3>
+      <p>Half of your take-home pay should go towards the absolute essentials. These are the expenses you must pay to live safely and work effectively.</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>Housing:</strong> Rent or mortgage payments.</li>
+        <li><strong>Utilities:</strong> Electricity, water, gas, and internet.</li>
+        <li><strong>Transportation:</strong> Car payments, gas, insurance, and public transit passes needed for work.</li>
+        <li><strong>Groceries:</strong> Basic food and household supplies.</li>
+        <li><strong>Insurance:</strong> Health and car insurance premiums.</li>
+        <li><strong>Minimum Debt Payments:</strong> Only the minimum required payment on your debts. Extra payments go in the 20% category.</li>
+      </ul>
+      <p class="mt-2 text-sm text-muted-foreground">If your Needs exceed 50%, you may need to look for ways to reduce your core expenses, like finding a cheaper apartment or cutting back on utility usage.</p>
+
+      <h3 class="mt-6 text-xl font-semibold">30% for Wants</h3>
+      <p>This category is for all the non-essential spending that enhances your lifestyle. It's the "fun" part of your budget that you can adjust most easily when you need to save more.</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>Dining Out:</strong> Restaurants, bars, and coffee shops.</li>
+        <li><strong>Entertainment:</strong> Movie tickets, streaming subscriptions (Netflix, Spotify), concerts, and hobbies.</li>
+        <li><strong>Shopping:</strong> New clothes, gadgets, and home decor that aren't necessities.</li>
+        <li><strong>Travel:</strong> Vacations and weekend trips.</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">20% for Savings & Debt Repayment</h3>
+      <p>This is the most important category for your financial future. It's where you pay yourself first and actively work towards your long-term goals. Aim to allocate at least 20% of your income here.</p>
+       <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>Emergency Fund:</strong> Building a fund that covers 3-6 months of essential living expenses.</li>
+        <li><strong>Retirement Savings:</strong> Contributions to a 401(k), IRA, or other retirement accounts.</li>
+        <li><strong>Extra Debt Payments:</strong> Paying more than the minimum on student loans, credit cards, or personal loans to get out of debt faster.</li>
+        <li><strong>Other Savings Goals:</strong> Saving for a down payment on a house, a new car, or other large purchases.</li>
+      </ul>
+      
+      <h2 class="mt-8 text-2xl font-bold">Putting It Into Practice</h2>
+      <p>The 50/30/20 rule isn't rigid; it's a flexible guideline. If you have high-interest debt, you might shift some of your "Wants" money into the "Savings & Debt" category temporarily. The key is to be intentional with your spending and ensure you're making progress towards your financial goals every month.</p>
+    `
   },
   {
     id: '5',
@@ -55,7 +98,7 @@ export const posts: Post[] = [
     slug: 'side-hustles-to-boost-your-income',
     title: '10 Side Hustles You Can Start Today to Boost Your Income',
     excerpt: 'Looking for ways to make extra money? Here are 10 profitable side hustles you can start with little to no investment.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://placehold.co/800x450.png',
     imageHint: 'laptop desk',
     category: 'side-hustles',
     author: 'John Smith',
@@ -72,7 +115,7 @@ export const posts: Post[] = [
     slug: 'investing-101-a-beginners-guide',
     title: 'Investing 101: A Beginner\'s Guide to Growing Your Wealth',
     excerpt: 'Intimidated by the stock market? This guide breaks down the basics of investing to help you start building long-term wealth.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://placehold.co/800x450.png',
     imageHint: 'stock chart',
     category: 'investing',
     author: 'Emily White',
@@ -86,7 +129,7 @@ export const posts: Post[] = [
     slug: 'how-to-improve-your-credit-score',
     title: 'How to Improve Your Credit Score by 100 Points',
     excerpt: 'A good credit score is key to financial health. Follow these actionable steps to improve your score and unlock better financial opportunities.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://placehold.co/800x450.png',
     imageHint: 'credit score report',
     category: 'credit-score',
     author: 'David Chen',
