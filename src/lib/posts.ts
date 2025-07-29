@@ -6,7 +6,7 @@ export const posts: Post[] = [
     slug: 'the-50-30-20-budgeting-rule',
     title: 'The 50/30/20 Rule: A Simple Budget to Transform Your Finances',
     excerpt: 'Discover the power of the 50/30/20 rule, a straightforward budgeting framework that helps you manage your needs, wants, and financial goals without complicated spreadsheets.',
-    imageUrl: 'https://placehold.co/800x450.png',
+    imageUrl: '/images/simple_budget_rules.png',
     imageHint: 'budget piggybank',
     category: 'budgeting',
     author: 'Maria Garcia',
