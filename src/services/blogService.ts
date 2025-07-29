@@ -1,17 +1,13 @@
+
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import type { Post } from '@/lib/types';
 
-// IMPORTANT: Path to your service account key file
-// You need to download this from your Firebase project settings
-const serviceAccount = process.env.GOOGLE_APPLICATION_CREDENTIALS
-  ? JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS)
-  : undefined;
-
+// Initialize Firebase Admin SDK
 if (getApps().length === 0) {
-  initializeApp({
-    credential: serviceAccount ? cert(serviceAccount) : undefined,
-  });
+  // When running in a Google Cloud environment, the SDK automatically
+  // finds the service account credentials.
+  initializeApp();
 }
 
 const db = getFirestore();
