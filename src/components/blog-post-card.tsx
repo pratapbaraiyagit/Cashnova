@@ -9,34 +9,31 @@ import { ArrowRight, Calendar, Clock } from 'lucide-react';
 interface BlogPostCardProps {
   post: Post;
   orientation?: 'vertical' | 'horizontal';
-  aspect?: string;
-  className?: string;
 }
 
-export default function BlogPostCard({ post, orientation = 'vertical', aspect = 'aspect-video', className }: BlogPostCardProps) {
+export default function BlogPostCard({ post, orientation = 'vertical' }: BlogPostCardProps) {
   const { title, excerpt, imageUrl, imageHint, category, slug, date, readingTime } = post;
 
-  const cardClasses = cn("h-full flex flex-col bg-card overflow-hidden transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-primary/10 group-hover:-translate-y-1", className);
+  const cardClasses = "h-full flex flex-col bg-card overflow-hidden transition-all duration-300 group-hover:shadow-xl";
 
   const cardContent = (
     <>
-      <div className={cn("relative w-full overflow-hidden", aspect)}>
+      <div className="relative w-full aspect-video overflow-hidden bg-muted">
         <Image
           src={imageUrl}
           alt={title}
-          width={400}
-          height={225}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          className="object-contain transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />
       </div>
-      <div className="flex flex-col flex-grow p-6 pt-0">
-          <CardHeader className="p-0 pt-6">
+      <div className="flex flex-col flex-grow p-6">
+          <CardHeader className="p-0">
             <Badge variant="secondary" className="w-fit mb-2 uppercase text-xs tracking-wider">{category.replace('-', ' ')}</Badge>
-            <CardTitle className="text-lg leading-snug group-hover:text-primary transition-colors line-clamp-2">{title}</CardTitle>
+            <CardTitle className="text-lg leading-snug group-hover:text-primary transition-colors line-clamp-2 h-[40px]">{title}</CardTitle>
           </CardHeader>
           <CardContent className="flex-grow p-0 pt-4 text-sm">
-            <p className="text-muted-foreground line-clamp-3">{excerpt}</p>
+            <p className="text-muted-foreground line-clamp-3 h-[60px]">{excerpt}</p>
           </CardContent>
           <CardFooter className="flex justify-between items-center text-xs text-muted-foreground mt-auto pt-4 p-0">
             <div className="flex flex-col sm:flex-row sm:gap-4 gap-1 text-xs">
@@ -58,14 +55,13 @@ export default function BlogPostCard({ post, orientation = 'vertical', aspect = 
   );
   
   const horizontalLayout = (
-    <Card className={cn(cardClasses, "md:flex-row")}>
-      <div className="md:w-2/5 relative aspect-video md:aspect-auto overflow-hidden">
+     <Card className={cn(cardClasses, "md:flex-row")}>
+      <div className="md:w-2/5 relative aspect-video md:aspect-auto overflow-hidden bg-muted">
         <Image
           src={imageUrl}
           alt={title}
-          width={300}
-          height={300}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          fill
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={imageHint}
         />
       </div>
