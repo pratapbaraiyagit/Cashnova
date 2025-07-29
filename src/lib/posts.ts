@@ -20,8 +20,8 @@ export const posts: Post[] = [
     slug: '10-simple-ways-to-save-money-daily',
     title: '10 Simple Ways to Save Money Daily',
     excerpt: 'Discover 10 easy and practical ways to cut your expenses and boost your savings every single day.',
-    imageUrl: 'https://placehold.co/800x600.png',
-    imageHint: 'saving money',
+    imageUrl: '/images/save-money-banner.png',
+    imageHint: 'save money banner',
     category: 'saving-tips',
     author: 'John Smith',
     date: '2024-07-31',
@@ -79,7 +79,7 @@ export const posts: Post[] = [
     date: '2024-07-22',
     featured: true,
     readingTime: 8,
-    content: `<p>Investing is the most powerful tool for building wealth over time, thanks to the magic of compound interest. While it might seem complex, the basic principles are straightforward.</p><h3>What is Investing?</h3><p>At its core, investing is about using your money to buy assets that have the potential to generate income or appreciate in value. These assets can include stocks, bonds, real estate, and more.</p><h3>Why Should You Invest?</h3><p>Investing helps your money grow and outpace inflation. Instead of letting your cash sit in a low-interest savings account, investing puts it to work for you.</p><h3>How to Get Started</h3><p>A great way for beginners to start is with low-cost index funds or ETFs. These funds hold a diversified portfolio of stocks, which spreads out your risk. Platforms like Vanguard, Fidelity, and Charles Schwab make it easy to open an account and start investing with a small amount of money.</p>`
+    content: `<p>Investing is the most powerful tool for building wealth over time, thanks to the magic of compound interest. While it might seem complex, the basic principles are straightforward.</p><h3>What is Investing?</h3><p>At its core, investing is about using your money to buy assets that have the potential to generate income or appreciate in value. These assets can include stocks, bonds, real estate, and more.</p><h3>Why Should You Invest?</h3><p>Investing helps your money grow and outpace inflation. Instead of letting your cash sit in a low-interest savings account, it puts it to work for you.</p><h3>How to Get Started</h3><p>A great way for beginners to start is with low-cost index funds or ETFs. These funds hold a diversified portfolio of stocks, which spreads out your risk. Platforms like Vanguard, Fidelity, and Charles Schwab make it easy to open an account and start investing with a small amount of money.</p>`
   },
   {
     id: '4',
