@@ -74,7 +74,7 @@ export default function BlogPostCard({ post, orientation = 'vertical' }: BlogPos
           <p className="text-muted-foreground text-sm line-clamp-3">{excerpt}</p>
         </CardContent>
         <CardFooter className="mt-auto flex justify-between items-center text-xs text-muted-foreground p-0 pt-4">
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-1 sm:gap-4">
             <div className="flex items-center gap-1.5">
                 <Calendar className="h-3.5 w-3.5" />
                 <span>{date}</span>

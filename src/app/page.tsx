@@ -48,7 +48,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4">
+      <section className="container mx-auto px-4 overflow-hidden">
         <h2 className="text-3xl font-bold text-center">Trending Insights</h2>
         <p className="text-muted-foreground text-center mt-2 mb-10">Handpicked articles making waves in the community.</p>
         <Carousel
