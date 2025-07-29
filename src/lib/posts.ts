@@ -20,7 +20,7 @@ export const posts: Post[] = [
     slug: '10-simple-ways-to-save-money-daily',
     title: '10 Simple Ways to Save Money Daily',
     excerpt: 'Discover 10 easy and practical ways to cut your expenses and boost your savings every single day.',
-    imageUrl: '/images/save-money-banner.png',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/cashflow-insights-465n8.appspot.com/o/blog-images%2Fsave-money-banner.png?alt=media',
     imageHint: 'save money banner',
     category: 'saving-tips',
     author: 'John Smith',
