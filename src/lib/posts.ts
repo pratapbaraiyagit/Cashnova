@@ -2,6 +2,87 @@ import type { Post } from './types';
 
 export const posts: Post[] = [
   {
+    id: '8',
+    slug: 'debt-markets-strategic-moves-july-2025',
+    title: 'India\'s Debt Markets: Strategic Moves in July 2025',
+    excerpt: 'India\'s debt ecosystem is seeing a transformation in July 2025 with a strategic focus on fiscal discipline, infrastructure-backed borrowing, and growing green bond issuances.',
+    imageUrl: '/images/debt_markets_banner.png',
+    imageHint: 'debt markets and bonds',
+    category: 'debt-markets',
+    author: 'Cashnova Team',
+    date: '2024-08-03',
+    featured: true,
+    readingTime: 8,
+    content: `
+      <p>India's debt ecosystem is seeing a transformation in July 2025 with a strategic focus on fiscal discipline, infrastructure-backed borrowing, and growing green bond issuances. Government and corporates alike are actively restructuring debt, diversifying instruments, and leveraging new technologies for better transparency and risk mitigation.</p>
+      
+      <h3 class="mt-6 text-xl font-semibold">🏛️ 1. Sovereign Green Bonds Gain Traction</h3>
+      <p>India raised ₹12,000 crore this month through sovereign green bonds, its largest-ever green issuance. The funds are earmarked for renewable energy, electric mobility, and afforestation initiatives under India's Net Zero 2070 roadmap.</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>Amount:</strong> ₹12,000 crore</li>
+        <li><strong>Tenor:</strong> 10 years</li>
+        <li><strong>Yield:</strong> 7.22%</li>
+        <li><strong>Use of Proceeds:</strong> Solar parks, EV charging stations, river rejuvenation</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">🏗️ 2. Infrastructure Bonds by NHAI & REC</h3>
+      <p>The National Highways Authority of India (NHAI) and Rural Electrification Corporation (REC) launched large infrastructure bond programs to accelerate road and energy projects.</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>✅ NHAI Infra Bonds</strong><br>Size: ₹10,000 crore | Tenor: 15 years | Backed by toll revenues</li>
+        <li><strong>✅ REC Power Bonds</strong><br>Size: ₹6,500 crore | Tenor: 10 years | Focus: Grid modernization, smart meters in Tier-2/3 cities</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">🏦 3. RBI's Debt Market Reforms in Action</h3>
+      <p>RBI's recent reforms under the "Retail Direct Scheme 2.0" are showing results. Retail participation in G-secs and SDLs (State Development Loans) grew by 22% month-on-month.</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>G-Sec portal sees record 2.3 lakh new registrations</li>
+        <li>Easy UPI-based bidding now live</li>
+        <li>Minimum lot size cut from ₹10,000 to ₹5,000 to encourage broader access</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">🏢 4. Corporate Debt Restructuring on the Rise</h3>
+      <p>Amid tightening liquidity and rising interest costs, several mid-cap firms are turning to structured debt refinancing and OTRs (One-Time Restructuring).</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>✅ FutureEdge Infra Ltd</strong><br>Debt: ₹4,200 crore | Lenders: SBI, ICICI, BoB | New Terms: 3-year moratorium, reduced interest spread</li>
+        <li><strong>✅ TechNova Biologics</strong><br>Successfully swapped dollar bonds into INR debt with hedging, saving ~1.8% in cost of capital</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">🟢 5. ESG-Linked Loans & Bonds Surge</h3>
+      <p>Environmental, Social, and Governance (ESG) criteria are becoming a funding magnet. July saw ₹4,300 crore in ESG-linked corporate bonds issued across sectors.</p>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>✅ Tata Chemicals ESG Bond</strong><br>Issue Size: ₹1,200 crore | Coupon Linked to Carbon Intensity Targets | Oversubscribed 3.1x</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">🔜 6. Upcoming Debt Issuances in August 2025</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>📌 HDFC Ltd – ₹9,000 crore via NCDs, 7-year maturity</li>
+        <li>📌 State of Maharashtra – ₹5,000 crore in SDLs, focus on water & irrigation</li>
+        <li>📌 ONGC Green Subsidiary – ₹2,800 crore green bonds for offshore wind</li>
+        <li>📌 Adani Ports – Refinancing $500M offshore debt, INR-bond route under consideration</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">🔍 7. Key Trends in Debt Management</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>📍 Shift Toward Longer Tenors:</strong> Issuers increasingly prefer 10+ year bonds to lock in current rates</li>
+        <li><strong>📍 Retail Participation Expanding:</strong> Driven by digital platforms and tax-free bonds</li>
+        <li><strong>📍 Rising Demand for Green/ESG Instruments:</strong> Investors demanding sustainability-linked disclosures and covenants</li>
+        <li><strong>📍 Lower Dependence on Bank Loans:</strong> Corporates tapping bond markets directly to bypass high borrowing costs</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">💡 8. Tips for Debt Investors</h3>
+      <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>Check Credit Ratings:</strong> Look for AA and above-rated issues</li>
+        <li><strong>Understand Covenants:</strong> Look beyond coupon rate—check default clauses</li>
+        <li><strong>Diversify Maturities:</strong> Ladder your investments to manage interest rate risks</li>
+        <li><strong>Track Yields:</strong> Don't chase high yield blindly—assess risk-return profile</li>
+      </ul>
+
+      <h3 class="mt-6 text-xl font-semibold">✅ Final Thought: A Market in Transition</h3>
+      <p>India's debt markets in July 2025 reflect a deliberate, diversified, and disciplined borrowing strategy. With stronger regulatory oversight, innovative instruments like ESG bonds, and growing retail access, debt is no longer just a tool of crisis—it's a calibrated engine for sustainable growth.</p>
+      <p>For investors, it's time to rethink fixed income—not as "safe" money, but as "smart" money.</p>
+    `
+  },
+  {
     id: '6',
     slug: 'capital-markets-ipo-watch-july-2025',
     title: 'Capital Markets & IPO Watch',
