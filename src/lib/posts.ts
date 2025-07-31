@@ -8,7 +8,7 @@ export const posts: Post[] = [
     excerpt: 'India\'s debt ecosystem is seeing a transformation in July 2025 with a strategic focus on fiscal discipline, infrastructure-backed borrowing, and growing green bond issuances.',
     imageUrl: '/images/debt_markets_banner.png',
     imageHint: 'debt markets and bonds',
-    category: 'debt-markets',
+    category: 'debt-management',
     author: 'Cashnova Team',
     date: '2024-08-03',
     featured: true,
